@@ -3,55 +3,77 @@
 <head>
 	<meta charset="utf-8">
 	<title>DevTools Instructions</title>
-	<link rel="stylesheet" href="css/styles.css?v=1.0">
+	<link rel="stylesheet" text="text/css" href="style.css">
+	<script src='script.js'></script>
 </head>
 <body>
-<!-- Put linebreaks for steps -->
-	<p class='title'>How to edit webpages using DevTools</p>
-	<p>DevTools is an amazing feature of the Google Chrome browser.  It allows developers to view and diagnose every piece of their web applications.  But even for non-developers, DevTools can be very useful.  Using DevTools, you can edit or change any aspect of a website on your local machine.  Your changes will be lost once you refresh the webpage, but that doesn’t mean learning DevTools doesn’t have its uses!</p>
-	<!-- Donald trump image here -->
+<div id="header">&nbsp;&nbsp;&nbsp;How to edit webpages using DevTools</div>
+<div id="devTools">DevTools goes here!</div>
+<div id="container">
+	<!-- Put linebreaks for steps -->
+	<p>DevTools is a feature on the Google Chrome browser that allows developers to view and diagnose every piece of their web applications.  But even for non-developers, DevTools can be very useful!  Using DevTools, you can edit or change any aspect of a website on your local machine.  Your changes will be lost once you refresh the webpage, but that doesn’t mean learning DevTools doesn’t have its uses!</p>
+	<img src='trumptweet.png' alt='Fake Trump tweet' width='640px' height='295px' style='left:calc(50% - 320px)' class='center'>
 	<h1>Getting Started</h1>
 	<ol>
 	<!-- Insert the link below here -->
-		<li>1.	If you aren’t currently using Chrome, then open this webpage with Chrome.  Instructions on how to download Google Chrome can be found here:   </li>
+		<li>If you aren’t currently using Chrome, then open this webpage with Chrome.  Instructions on how to download Google Chrome can be found <a target="_blank" href='https://support.google.com/chrome/answer/95346?hl=en&co=GENIE.Platform=Desktop'>here</a></li>
 		<li>Open DevTools by either:
-		<ul>
-			<li>Right-click on any part of the page and click Inspect</li>
-			<li>Using the top right settings button, go to Settings > More Tools > Developer Tools</li>
-			<li>Press Ctrl + Shift + I</li>
-		</ul>
+			<ul>
+				<li>Right-clicking on any part of the page and clicking <b>Inspect</b></li>
+				<li>Using the top right settings button <img src='settings.png' alt='settings' style='width:15px;height:17px'>, go to <b>Settings > More Tools > Developer Tools</b></li>
+				<li>Press <b>Ctrl + Shift + I </b>(<b>Cmd + Opt + I </b>on Mac)</li>
+			</ul>
 		</li>
-		<li>3.	Open the Elements tab.  Elements is used to inspect the HTML and style of a website</li>
+		<li>Dock DevTools to the right of this page if it isn't already there. <br><br>To do this: go to the settings panel inside DevTools and click the right dock icon.<br> <img style='left:20%' class='center' src='docktoright.png' alt='Dock'></li>
+		<li>Open the <b>Elements</b> tab at the top of DevTools.  <b>Elements</b> is used to inspect the HTML and style of a website
+			<img src='elements.png' alt='Elements tab' style='position:relative;left:10%'>
+		</li>
+		<li>Adjust the size of DevTools so that it is around half the webpage width. 
 	</ol>
 	<br>
 	<h1>How to Read HTML</h1>
-	<p>Before we begin, we must understand what HyperText Markup Language (HTML) is.  HTML tells a web browser how to organize and structure a website.  Some websites are entirely coded in HTML, but most are only partly HTML.</p>
+	<p>Before we begin, we must understand what <b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage (HTML) is.  HTML tells a web browser how to organize and structure a website.  Some websites are entirely coded in HTML, but most are only partly HTML.</p>
 	<h2>HTML Tags</h2>
 	<p>Tags could be anything you find on a webpage, such as buttons, text, boxes, tables, or images.  Tags are written like so:</p>
-	<!-- Tag values go here -->
+	<code class='center'><span style='color:blue'>&lt;</span>tag<span style='color:blue'>&gt;</span><span style='color:black'>Something might go here</span><span style='color:blue'>&lt;</span>/tag<span style='color:blue'>&gt;</span></code>
 	<p>Every webpage is structured with these tags:</p>
-	<!-- HTML Example here -->
+	<code>
+	<span style='color:blue'>&lt;</span>!DOCTYPE html<span style='color:blue'>&gt;</span><br>
+	<span style='color:blue'>&lt;</span>html<span style='color:blue'>&gt;</span><br>
+	&nbsp;<span style='color:blue'>&lt;</span>head<span style='color:blue'>&gt;</span><br>
+	&nbsp;&nbsp;<span style='color:blue'>&lt;!-- Information about this webpage goes here, such as its title --&gt;</span><br>
+	&nbsp;<span style='color:blue'>&lt;</span>/head<span style='color:blue'>&gt;</span><br>
+	&nbsp;<span style='color:blue'>&lt;</span>body<span style='color:blue'>&gt;</span><br>
+	&nbsp;&nbsp;<span style='color:blue'>&lt;!-- Nearly all content goes in here, the <b>body</b> of the webpage --&gt;</span><br>
+	&nbsp;<span style='color:blue'>&lt;</span>/body<span style='color:blue'>&gt;</span><br>
+	<span style='color:blue'>&lt;</span>/html<span style='color:blue'>&gt;</span><br>
+	</code>
 	<h2>Div</h2>
-	<p>One of the most common and important tags is a div.  A div is used to organize and style a box of code.  You will notice that div’s are used extensively to group similar objects together.</p>
-	<!-- DIV With code HERE -->
+	<p>One of the most common and important tags is a <b>div</b>.  A <b>div</b> is used to organize and style a box of code.  You will notice that <b>div</b>’s are used extensively to group similar objects together.</p>
+	<div style='text-align:center;width:100%'>
+		<p id='special'>Here is a piece of text located within a div.  Let's see how to change this to something else!</p>
+	</div>
 	<h1>Edit the HTML of a Website</h1>
 	<ol>
-		<li>On the Elements page, you should see a panel on the left containing HTML code.</li>
-		<li>Hover over various lines in this panel.  You should notice that as you hover over different tags of code, Chrome will highlight the tag’s location on the page with colors.  Locate the div that we want to change.</li>
-		<li>To open this div, click on the   icon to show its contents.</li>
-		<li>You should see a p tagline containing the words “Here is a piece of text located within a div.  Let’s see how to change this to something else!”  If you do not, then there is a shortcut to locating tags within the HTML code: right-click on the sentence we want to change above and click Inspect to immediately locate it.</li>
-		<li>To change the text, double-click on the sentence or right-click and click Edit Text</li>
-		<li>Type in whatever you want to and press Enter.  The text should change on your webpage!</li>
+		<li>On the <b>Elements</b> page, you should see a panel on the left containing HTML code.</li>
+		<li>Hover over various lines in this panel.  You should notice that as you hover over different tags of code, Chrome will highlight the tag’s location on the page with colors.  Locate the <b>div</b> that we want to change.</li>
+		<li>To open this <b>div</b>, click on the <img src='arrow.png' alt='Arrow'> icon to show its contents.</li>
+		<li>You should see a <b>p</b> tagline.  Open it up using the <img src='arrow.png' alt='Arrow'> icon.  <br><br>
+			If you do not, then there is a shortcut to locating tags within the HTML code: right-click on the sentence we want to change above and click <b>Inspect</b> to immediately locate it in DevTools.<br></li>
+		<li>To change the text, double-click on the sentence or right-click and click <b>Edit Text</b><br>
+			<img style='position:relative;left:15%' src='edittext.png' alt='Edit text'>
+		</li>
+		<li>Type in whatever you want to and press <b>Enter</b>.  The text should change on your webpage!</li>
 	</ol>
 	<h1>Edit the Style of a Website</h1>
-	<p>Still on the Elements page, you should see the Styles panel on the right of the page.  This panel is used to edit the style of a tag.</p>
+	<p>Still on the <b>Elements</b> page, you should see the <b>Styles</b> panel on the right of the page.  This panel is used to edit the style of a <b>tag</b>.</p>
 	<ol>
-		<li>At the top of this panel, underneath “element.style {“, you should see “color: red”.  Click on “red”.</li>
-		<li>Type in “green” and press Enter.  The text should now be green.</li>
-		<li>A new line should appear under “color:green”.  If the new line disappears, click directly underneath “color” to make a text field appear again.</li>
-		<li>Type “font-weight:bold” into the new line and press Enter.  The text should now be bolded!</li>
-		<li>Repeat steps 3-4 with the following styles:</li>
-		<ul>
+		<li>At the top of this panel, underneath “<b>element.style {</b>“, you should see “<b>color: red</b>”.  Click on “red”.</li>
+		<li>Type in “green” and press <b>Enter</b>.  The text should now be green.</li>
+		<li>A new line should appear under “<b>color:green</b>”.  If the new line disappears, click directly underneath “color” to make a text field appear again.</li>
+		<li>Type “<b>font-weight:bold</b>” into the new line and press <b>Enter</b>.  The text should now be bolded!</li>
+		<li>Repeat steps <b>3-4</b> with the following styles:</li>
+		<ul style='font-weight:bold'>
 			<li>font-size:30px</li>
 			<li>font-family:Verdana</li>
 			<li>font-variant:small-caps</li>
@@ -59,8 +81,9 @@
 			<li>direction:rtl</li>
 		</ul
 		<li>The text should now be in a capitalized, larger, green, underlined, Verdana font from right-to-left.</li>
-		<li>To learn more style changes you can make, head to https://websitesetup.org/wp-content/uploads/2016/10/wsu-css-cheat-sheet.pdf.</li>
+		<li>To learn more style changes you can make, head to <a target="_blank" href='https://websitesetup.org/wp-content/uploads/2016/10/wsu-css-cheat-sheet.pdf'>this CSS cheat sheet</a>.</li>
 	</ol>
-	<p>You now know how to edit the content and style of any webpage!  If you’d like to learn more about the remaining pages of Chrome DevTools, head to https://developer.chrome.com/devtools. </p>
+	<p>You now know how to edit the content and style of any webpage!  If you’d like to learn more about the remaining pages of Chrome DevTools, head to the <a target="_blank" href='https://developer.chrome.com/devtools'>Google Chrome DevTools Documentation</a>. </p>
+</div>
 </body>
 </html>
