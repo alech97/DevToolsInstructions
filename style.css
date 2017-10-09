@@ -54,6 +54,7 @@ code {
 	line-height:50px;
 	z-index:4;
 	background-color:white;
+	padding-top:12px;
 }
 
 figcaption {
@@ -74,7 +75,6 @@ figcaption {
 }
 
 #special {
-	color:red;
 	background-color:rgba(211, 211, 211, 0.37);
 	line-height:40px
 }
