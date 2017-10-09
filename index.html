@@ -17,21 +17,30 @@
 <div id="container">
 	<p>DevTools is a feature on the Google Chrome browser that allows developers to view and diagnose every piece of their web applications.  But even for non-developers, DevTools can be very useful!  Using DevTools, you can edit or change any aspect of a website on your local machine.  Your changes will be lost once you refresh the webpage, but that doesn’t mean learning DevTools doesn’t have its uses!</p>
 	<img src='trumptweet.png' alt='Fake Trump tweet' width='640px' height='295px' style='left:calc(50% - 320px)' class='center'>
+	<figcaption style='left:calc(50% - 278px)'>Figure 1. An example of what you can do with DevTools.</figcaption>
 	<h1>Getting Started</h1>
+	<p>To get started using Chrome DevTools:
 	<ol>
-		<li>If you aren’t currently using Chrome, then open this webpage with Chrome.  Instructions on how to download Google Chrome can be found <a target="_blank" href='https://support.google.com/chrome/answer/95346?hl=en&co=GENIE.Platform=Desktop'>here</a></li>
+		<li>Open this webpage with Chrome if you aren't currently using it.  Instructions on how to download Google Chrome can be found <a target="_blank" href='https://support.google.com/chrome/answer/95346?hl=en&co=GENIE.Platform=Desktop'>here</a>.</li>
 		<li>Open DevTools by either:
 			<ul>
 				<li>Right-clicking on any part of the page and clicking <b>Inspect</b></li>
-				<li>Using the top right settings button <img src='settings.png' alt='settings' style='width:15px;height:17px'>, go to <b>Settings > More Tools > Developer Tools</b></li>
-				<li>Press <b>Ctrl + Shift + I </b>(<b>Cmd + Opt + I </b>on Mac)</li>
+				<li>Going to <b>Settings > More Tools > Developer Tools</b> by using the top right settings button <img src='settings.png' alt='settings' style='width:11px;height:12px'>.</li>
+				<li>Pressing <b>Ctrl + Shift + I </b>(<b>Cmd + Opt + I </b>on Mac)</li>
 			</ul>
 		</li>
-		<li>Dock DevTools to the right of this page if it isn't already there. <br><br>To do this: go to the settings panel inside DevTools and click the right dock icon.<br> <img style='left:20%' class='center' src='docktoright.png' alt='Dock'></li>
-		<li>Open the <b>Elements</b> tab at the top of DevTools.  <b>Elements</b> is used to inspect the HTML and style of a website<br>
-			<img src='elements.png' alt='Elements tab' style='position:relative;left:10%'>
+		<li>
+			Dock DevTools to the right of this browser if it isn't already there by going to the settings panel inside DevTools and 
+			clicking the right dock icon.<br> 
+			<img style='left:20%' class='center' src='docktoright.png' alt='Dock'>
+			<figcaption style='left:20%'>Figure 2. Right Dock icon.</figcaption>
 		</li>
-		<li>Adjust the size of DevTools so that it is around half the webpage width. 
+		<li>
+			Open the <b>Elements</b> tab at the top of DevTools.  <b>Elements</b> is used to inspect the HTML and style of a website.<br>
+			<img src='elements.png' alt='Elements tab' style='position:relative;left:10%'>
+			<figcaption style='left:10%'>Figure 3. Elements page.</figcaption>
+		</li>
+		<li>Adjust the size of DevTools so that it is around half the webpage width.</li>
 	</ol>
 	<br>
 	<h1>How to Read HTML</h1>
@@ -57,24 +66,27 @@
 		<p id='special'>Here is a piece of text located within a div.  Let's see how to change this to something else!</p>
 	</div>
 	<h1>Edit the HTML of a Website</h1>
+	<p>To edit the text of the red sentence above:</p>
 	<ol>
-		<li>On the <b>Elements</b> page, you should see a panel on the left containing HTML code.</li>
-		<li>Hover over various lines in this panel.  You should notice that as you hover over different tags of code, Chrome will highlight the tag’s location on the page with colors.  Locate the <b>div</b> that we want to change.</li>
-		<li>To open this <b>div</b>, click on the <img src='arrow.png' alt='Arrow'> icon to show its contents.</li>
-		<li>You should see a <b>p</b> tagline.  Open it up using the <img src='arrow.png' alt='Arrow'> icon.  <br><br>
-			If you do not, then there is a shortcut to locating tags within the HTML code: right-click on the sentence we want to change above and click <b>Inspect</b> to immediately locate it in DevTools.<br></li>
-		<li>To change the text, double-click on the sentence or right-click and click <b>Edit Text</b><br>
+		<li>Find the panel containing HTML code on the left of the <b>Elements</b> page.</li>
+		<li>Hover over various lines in this panel.  Notice that Chrome will highlight the tag’s location on the page with colors.</li>
+		<li>Locate the <b>div</b> that we want to change.</li>
+		<li>Open this <b>div</b> by clicking on the <img src='arrow.png' alt='Arrow'> icon to show its contents.</li>
+		<li>Open the <b>p</b> tagline using the <img src='arrow.png' alt='Arrow'> icon or by right-clicking on the sentence we want to change above and clicking <b>Inspect</b> to immediately locate it in DevTools.<br></li>
+		<li>Double-click on the sentence or right-click and click <b>Edit Text</b> to change the text.<br>
 			<img style='position:relative;left:15%' src='edittext.png' alt='Edit text'>
+			<figcaption style='left:15%'>Figure 4. Editing text.</figcaption>
 		</li>
 		<li>Type in whatever you want to and press <b>Enter</b>.  The text should change on your webpage!</li>
 	</ol>
 	<h1>Edit the Style of a Website</h1>
-	<p>Still on the <b>Elements</b> page, you should see the <b>Styles</b> panel on the right of the page.  This panel is used to edit the style of a <b>tag</b>.</p>
+	<p>Still on the <b>Elements</b> page, you should see the <b>Styles</b> panel on the right of the page.  This panel is used to edit the style of a <b>tag</b>.
+	To edit the style of the red sentence above:</p>
 	<ol>
-		<li>At the top of this panel, underneath “<b>element.style {</b>“, you should see “<b>color: red</b>”.  Click on “red”.</li>
+		<li>Click on “red” in “<b>color: red</b>” at the top of the panel, underneath “<b>element.style {</b>“.</li>
 		<li>Type in “green” and press <b>Enter</b>.  The text should now be green.</li>
-		<li>A new line should appear under “<b>color:green</b>”.  If the new line disappears, click directly underneath “color” to make a text field appear again.</li>
-		<li>Type “<b>font-weight:bold</b>” into the new line and press <b>Enter</b>.  The text should now be bolded!</li>
+		<li>Click directly underneath the newly edited line if a new textbox has not already appeared underneath it.</li>
+		<li>Type “<b>font-weight:bold</b>” into the textbox and press <b>Enter</b>.  The text should now be bolded!</li>
 		<li>Repeat steps <b>3-4</b> with the following styles:</li>
 		<ul style='font-weight:bold'>
 			<li>font-size:30px</li>
@@ -82,11 +94,10 @@
 			<li>font-variant:small-caps</li>
 			<li>text-decoration:underline</li>
 			<li>direction:rtl</li>
-		</ul
-		<li>The text should now be in a capitalized, larger, green, underlined, Verdana font from right-to-left.</li>
-		<li>To learn more style changes you can make, head to <a target="_blank" href='https://websitesetup.org/wp-content/uploads/2016/10/wsu-css-cheat-sheet.pdf'>this CSS cheat sheet</a>.</li>
+		</ul>
 	</ol>
-	<p>You now know how to edit the content and style of any webpage!  If you’d like to learn more about the remaining pages of Chrome DevTools, head to the <a target="_blank" href='https://developer.chrome.com/devtools'>Google Chrome DevTools Documentation</a>. </p>
+	<p>The text should now be in a capitalized, larger, green, underlined, Verdana font from right-to-left. To learn more style changes you can make, head to <a target="_blank" href='https://websitesetup.org/wp-content/uploads/2016/10/wsu-css-cheat-sheet.pdf'>this CSS cheat sheet</a>.
+	<br><br> You now know how to edit the content and style of any webpage!  If you’d like to learn more about the remaining pages of Chrome DevTools, head to the <a target="_blank" href='https://developer.chrome.com/devtools'>Google Chrome DevTools Documentation</a>. </p>
 </div>
 </body>
 </html>

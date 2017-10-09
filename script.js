@@ -9,7 +9,7 @@ setInterval(function() {
 	toggleDevTools(devToolsOpen);
     devToolsOpen = false;
     console.log(element);
-    //console.clear();
+    console.clear();
 }, 500);
 
 function toggleDevTools(check) {
@@ -19,9 +19,7 @@ function toggleDevTools(check) {
 }
 
 window.onscroll = function() {
-	console.log(document.scrollHeight - document.scrollingElement.scrollTop);
 	if (document.scrollingElement.scrollTop === 0) {
-		document.getElementById('header').style.position = 'static';
 		document.getElementById('header').style.boxShadow = 'none';
 		document.getElementById('header').style.webkitBoxShadow = 'none';
 	}
